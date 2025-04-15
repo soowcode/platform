@@ -221,13 +221,13 @@ const resources = [
   {
     id: 'frontend-basics',
     title: 'Les bases du Frontend',
-    description: 'Apprenez HTML, CSS et JavaScript pour créer des sites web interactifs',
+    description: 'Apprenez HTML, CSS  pour créer votre premier web',
     image: 'https://images.unsplash.com/photo-1593720219276-0b1eacd0aef4?w=800&auto=format&fit=crop&q=80',
     level: 'Débutant',
     type: 'Parcours',
     category: 'parcours',
-    tags: ['HTML', 'CSS', 'JavaScript', 'Frontend'],
-    link: '/parcours/frontend-basics'
+    tags: ['HTML', 'CSS', 'Frontend'],
+    link: 'https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3#table-of-content'
   },
   {
     id: 'react-fundamentals',
@@ -238,7 +238,7 @@ const resources = [
     type: 'Parcours',
     category: 'parcours',
     tags: ['React', 'JavaScript', 'Frontend'],
-    link: '/parcours/react-fundamentals'
+    link: 'https://openclassrooms.com/fr/courses/7150606-creez-une-application-react-complete'
   },
   {
     id: 'nodejs-express',
@@ -249,7 +249,7 @@ const resources = [
     type: 'Parcours',
     category: 'parcours',
     tags: ['Node.js', 'Express', 'Backend'],
-    link: '/parcours/nodejs-express'
+    link: 'https://openclassrooms.com/fr/courses/6390246-passez-au-full-stack-avec-node-js-express-et-mongodb'
   },
   {
     id: 'python-data-science',
@@ -260,7 +260,7 @@ const resources = [
     type: 'Parcours',
     category: 'parcours',
     tags: ['Python', 'Data Science', 'Machine Learning'],
-    link: '/parcours/python-data-science'
+    link: 'https://openclassrooms.com/fr/courses/7771531-decouvrez-les-librairies-python-pour-la-data-science'
   },
   {
     id: 'flutter-mobile',
@@ -268,10 +268,10 @@ const resources = [
     description: 'Créez des applications mobiles natives pour iOS et Android',
     image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&auto=format&fit=crop&q=80',
     level: 'Intermédiaire',
-    type: 'Parcours',
-    category: 'parcours',
+    type: 'Vidéos',
+    category: 'videos',
     tags: ['Flutter', 'Mobile', 'Cross-platform'],
-    link: '/parcours/flutter-mobile'
+    link: 'https://www.youtube.com/playlist?list=PL4cUxeGkcC9jLYyp2Aoh6hcWuxFDX6PBJ'
   },
   {
     id: 'fullstack-javascript',
@@ -282,7 +282,7 @@ const resources = [
     type: 'Parcours',
     category: 'parcours',
     tags: ['JavaScript', 'Frontend', 'Backend', 'Fullstack'],
-    link: '/parcours/fullstack-javascript'
+    link: 'https://www.w3schools.com/js/default.asp'
   },
   {
     id: 'mdn-web-docs',
@@ -371,7 +371,14 @@ const filteredResources = computed(() => {
     const levelMatch = selectedLevel.value === 'all' || resource.level === levelMap[selectedLevel.value]
     const tagsMatch = selectedTags.value.length === 0 || 
       selectedTags.value.every(tag => resource.tags.includes(tag))
-    return categoryMatch && levelMatch && tagsMatch
+    const searchMatch = !searchQuery.value || [
+      resource.title,
+      resource.description,
+      ...resource.tags
+    ].some(text => 
+      text.toLowerCase().includes(searchQuery.value.toLowerCase())
+    )
+    return categoryMatch && levelMatch && tagsMatch && searchMatch
   })
 })
 

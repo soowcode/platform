@@ -14,7 +14,7 @@
           <NuxtLink to="/blog" class="nav-link">Blog</NuxtLink>
           <NuxtLink to="/communaute" class="nav-link">Communauté</NuxtLink>
           <NuxtLink to="/about" class="nav-link">À propos</NuxtLink>
-suite          <button @click="toggleColorMode" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+          <button @click="toggleColorMode" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
             <Icon :name="colorMode.value === 'dark' ? 'ph:sun-bold' : 'ph:moon-bold'" class="w-5 h-5 text-gray-700 dark:text-white" />
           </button>
         </div>

@@ -96,7 +96,7 @@
           <p class="text-lg text-gray-600 dark:text-gray-300 mb-8">
             Ensemble, construisons un avenir technologique plus inclusif en Afrique.
           </p>
-          <NuxtLink to="/communaute" class="btn-primary">
+          <NuxtLink to="/communaute" class="btn-primary text-2xl  text-primary-600 mb-8">
             Rejoindre la communauté
           </NuxtLink>
         </div>
