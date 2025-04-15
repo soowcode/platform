@@ -11,7 +11,7 @@
             Une communauté dédiée à l'autonomisation des femmes dans le domaine de l'informatique
           </p>
           <div class="flex justify-center space-x-4">
-            <NuxtLink to="/parcours" class="btn-primary">
+            <NuxtLink to="/ressources?category=parcours" class="btn-primary">
               Découvrir les parcours
             </NuxtLink>
             <NuxtLink to="/communaute" class="btn-secondary">

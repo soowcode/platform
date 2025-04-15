@@ -10,13 +10,12 @@
 
         <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center space-x-8">
-          <NuxtLink to="/parcours" class="nav-link">Parcours</NuxtLink>
           <NuxtLink to="/ressources" class="nav-link">Ressources</NuxtLink>
           <NuxtLink to="/blog" class="nav-link">Blog</NuxtLink>
           <NuxtLink to="/communaute" class="nav-link">Communauté</NuxtLink>
           <NuxtLink to="/about" class="nav-link">À propos</NuxtLink>
-          <button @click="toggleColorMode" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
-            <Icon :name="colorMode.value === 'dark' ? 'ph:sun-bold' : 'ph:moon-bold'" class="w-5 h-5" />
+suite          <button @click="toggleColorMode" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800">
+            <Icon :name="colorMode.value === 'dark' ? 'ph:sun-bold' : 'ph:moon-bold'" class="w-5 h-5 text-gray-700 dark:text-white" />
           </button>
         </div>
 
@@ -29,7 +28,6 @@
       <!-- Mobile Navigation -->
       <div v-show="isMenuOpen" class="md:hidden">
         <div class="px-2 pt-2 pb-3 space-y-1">
-          <NuxtLink to="/parcours" class="mobile-nav-link">Parcours</NuxtLink>
           <NuxtLink to="/ressources" class="mobile-nav-link">Ressources</NuxtLink>
           <NuxtLink to="/blog" class="mobile-nav-link">Blog</NuxtLink>
           <NuxtLink to="/communaute" class="mobile-nav-link">Communauté</NuxtLink>
