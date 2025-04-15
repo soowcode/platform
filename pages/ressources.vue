@@ -363,7 +363,12 @@ const allTags = computed(() => {
 const filteredResources = computed(() => {
   return resources.filter(resource => {
     const categoryMatch = selectedCategory.value === 'all' || resource.category === selectedCategory.value
-    const levelMatch = selectedLevel.value === 'all' || resource.level.toLowerCase() === selectedLevel.value
+    const levelMap = {
+      'debutant': 'Débutant',
+      'intermediaire': 'Intermédiaire',
+      'avance': 'Avancé'
+    }
+    const levelMatch = selectedLevel.value === 'all' || resource.level === levelMap[selectedLevel.value]
     const tagsMatch = selectedTags.value.length === 0 || 
       selectedTags.value.every(tag => resource.tags.includes(tag))
     return categoryMatch && levelMatch && tagsMatch
