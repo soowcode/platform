@@ -1,14 +1,14 @@
 <template>
-  <main class="pt-24 pb-16">
+  <main class="pt-20 pb-12">
     <!-- Hero Section -->
-    <section class="relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-900 py-24">
+    <section class="relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-secondary-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-900 py-12">
       <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-5xl sm:text-6xl font-heading font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-6 animate-fade-in">
+          <h1 class="text-3xl sm:text-4xl font-heading font-bold bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent mb-3 animate-fade-in">
             Ressources d'apprentissage
           </h1>
-          <p class="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 animate-fade-in-delay">
+          <p class="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-4 animate-fade-in-delay">
             Une collection soigneusement sélectionnée pour enrichir votre parcours d'apprentissage
           </p>
           <div class="relative w-full max-w-2xl mx-auto animate-fade-in-delay-2">
@@ -27,11 +27,11 @@
     </section>
 
     <!-- Resources Grid -->
-    <section class="py-16">
+    <section class="py-12">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Filters -->
-        <div class="mb-12 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 animate-fade-in-up">
-          <div class="space-y-6">
+        <div class="mb-6 bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-3 animate-fade-in-up">
+          <div class="space-y-4">
             <!-- Categories -->
             <div>
               <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Catégories</h3>
