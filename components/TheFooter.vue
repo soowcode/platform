@@ -10,7 +10,6 @@
         <div>
           <h4 class="text-sm font-semibold text-gray-900 dark:text-white uppercase mb-4">Navigation</h4>
           <ul class="space-y-2">
-            <li><NuxtLink to="/parcours" class="footer-link">Parcours</NuxtLink></li>
             <li><NuxtLink to="/ressources" class="footer-link">Ressources</NuxtLink></li>
             <li><NuxtLink to="/blog" class="footer-link">Blog</NuxtLink></li>
             <li><NuxtLink to="/communaute" class="footer-link">Communauté</NuxtLink></li>
