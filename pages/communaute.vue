@@ -35,6 +35,43 @@
       </div>
     </section>
 
+    <!-- News Section -->
+    <section class="py-12">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Actualités de la communauté</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div v-for="news in communityNews" :key="news.id" class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl animate-fade-in-up">
+            <div class="relative aspect-w-16 aspect-h-9 overflow-hidden">
+              <img :src="news.image" :alt="news.title" class="object-cover w-full h-full transform transition-transform duration-500 group-hover:scale-110">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              <div class="absolute bottom-4 left-4 text-white flex items-center space-x-2">
+                <Icon :name="news.categoryIcon" class="w-4 h-4" />
+                <span class="text-sm font-medium">{{ news.category }}</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400 mb-2">
+                <Icon name="ph:calendar" class="w-4 h-4" />
+                <span>{{ news.date }}</span>
+              </div>
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">{{ news.title }}</h3>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">{{ news.description }}</p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                  <div v-for="tag in news.tags" :key="tag" class="px-2 py-1 bg-gray-100 dark:bg-gray-700 rounded-full text-xs text-gray-600 dark:text-gray-300">
+                    {{ tag }}
+                  </div>
+                </div>
+                <button class="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium transition-colors duration-300">
+                  Lire plus
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Upcoming Events Section -->
     <section class="py-12 bg-gray-50 dark:bg-gray-900">
       <div class="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -95,15 +132,48 @@
       <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 class="text-3xl font-bold mb-4">Rejoignez notre communauté</h2>
         <p class="text-xl mb-8 opacity-90">Participez à des événements, partagez vos connaissances et grandissez avec nous</p>
-        <button class="px-8 py-4 bg-white text-primary-600 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 transform hover:scale-105">
+        <NuxtLink to="/contact" class="inline-block px-8 py-4 bg-white text-primary-600 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-lg active:scale-95">
           Devenir membre
-        </button>
+        </NuxtLink>
       </div>
     </section>
   </main>
 </template>
 
 <script setup>
+const communityNews = [
+  {
+    id: 1,
+    title: 'Lancement du nouveau programme de mentorat',
+    description: 'Un programme sur 6 mois pour accompagner les développeurs juniors',
+    date: '10 Mars 2024',
+    category: 'Programme',
+    categoryIcon: 'ph:graduation-cap',
+    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?w=800&auto=format&fit=crop&q=80',
+    tags: ['Mentorat', 'Formation']
+  },
+  {
+    id: 2,
+    title: 'Mise à jour majeure de la plateforme',
+    description: 'Nouvelles fonctionnalités et améliorations de performance',
+    date: '8 Mars 2024',
+    category: 'Plateforme',
+    categoryIcon: 'ph:rocket',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&auto=format&fit=crop&q=80',
+    tags: ['Technique', 'Innovation']
+  },
+  {
+    id: 3,
+    title: 'Nouveau partenariat stratégique',
+    description: 'Collaboration avec une grande école de développement',
+    date: '5 Mars 2024',
+    category: 'Partenariat',
+    categoryIcon: 'ph:handshake',
+    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop&q=80',
+    tags: ['Éducation', 'Croissance']
+  }
+]
+
 const stats = {
   members: '500+',
   events: '50+',

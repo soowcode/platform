@@ -28,8 +28,8 @@
         <div>
           <h4 class="text-sm font-semibold text-gray-900 dark:text-white uppercase mb-4">Suivez-nous</h4>
           <div class="flex space-x-4">
-            <a href="#" class="social-link"><Icon name="ph:twitter-logo-bold" /></a>
-            <a href="#" class="social-link"><Icon name="ph:linkedin-logo-bold" /></a>
+            <a href="https://x.com/Sow34979868" class="social-link"><Icon name="ph:twitter-logo-bold" /></a>
+            <a href="https://www.linkedin.com/in/ousmane-soowcode/" class="social-link"><Icon name="ph:linkedin-logo-bold" /></a>
             <a href="#" class="social-link"><Icon name="ph:instagram-logo-bold" /></a>
             <a href="#" class="social-link"><Icon name="ph:youtube-logo-bold" /></a>
           </div>
